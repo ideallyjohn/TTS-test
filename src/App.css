@@ -1,38 +1,97 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.text-to-speech {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 20px;
+  max-width: 90vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-to-speech__textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: 200px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px auto;
+  resize: none;
+}
+
+.text-to-speech__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.text-to-speech__voice-select select {
+  font-size: 1em;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.text-to-speech__rate-input label,
+.text-to-speech__pitch-input label {
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.text-to-speech__rate-input input,
+.text-to-speech__pitch-input input {
+  font-size: 1em;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.text-to-speech__file-input label {
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.text-to-speech__file-input input {
+  font-size: 1em;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.text-to-speech__play-button,
+.text-to-speech__stop-button {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.text-to-speech__play-button:hover,
+.text-to-speech__stop-button:hover {
+  background-color: #0069d9;
+}
+
+.text-to-speech__stop-button {
+  background-color: #dc3545;
+}
+
+.text-to-speech__stop-button:hover {
+  background-color: #c82333;
 }
